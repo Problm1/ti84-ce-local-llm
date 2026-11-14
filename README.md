@@ -17,7 +17,7 @@ Running a generative language model on a stock TI-84 Plus CE requires solving a 
 4. **Chat:** Launch **`CHATBOT`** from Cesium. Type a short lowercase prompt (press `0` for spaces), hit `enter`, and wait ~1-3 Minutes as the 48 MHz CPU crunches through the transformer layers.
 
 ## Current Limitations (v0.1)
-* **Speed:** Inference takes roughly 30–45 seconds per response on the 48 MHz CPU.
+* **Speed:** Inference takes roughly 1-3 Minutes per response on the 48 MHz CPU.
 * **Coherence:** Generates text and numbers for basic small talk, though clean sentence structure is still rough. Pull requests to optimize Flash pointer caching or speed up the dot-product loop are welcome!
 
 ## Building from Source
