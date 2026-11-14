@@ -2,7 +2,7 @@
 
 A genuine, 100% offline **Llama-architecture Transformer neural network** running natively on an unmodified **TI-84 Plus CE** graphing calculator (48 MHz Zilog eZ80 CPU, 154 KB RAM, 3.0 MB Flash ROM)—with **zero Wi-Fi mods, external microcontrollers, or PC tethering**.
 
-Because a 300K parameter model is way too small to reliably solve equations, it was specifically trained to hold basic small talk and **cheerfully refuse math or logic questions**.
+Because a 300K parameter model is way too small to reliably solve equations, it was specifically trained on basic greetings and to cheerfully refuse math or logic questions.
 
 ## How It Works
 Running a generative language model on a stock TI-84 Plus CE requires solving a severe memory wall:
@@ -18,7 +18,7 @@ Running a generative language model on a stock TI-84 Plus CE requires solving a 
 
 ## Current Limitations (v0.1)
 * **Speed:** Inference takes roughly 1-3 Minutes per response on the 48 MHz CPU.
-* **Coherence:** Generates text and numbers for basic small talk, though clean sentence structure is still rough. Pull requests to optimize Flash pointer caching or speed up the dot-product loop are welcome!
+* **Coherence:** Generates text and a few numbers, but still struggles to structure sentences.
 
 ## Building from Source
 1. Install the **[CE C/C++ Toolchain](https://github.com)**.
