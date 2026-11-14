@@ -18,7 +18,7 @@ Running a generative language model on a stock TI-84 Plus CE requires solving a 
 
 ## Current Limitations (v0.1)
 * **Speed:** Inference takes roughly 1-3 Minutes per response on the 48 MHz CPU.
-* **Coherence:** Generates text and a few numbers, but still struggles to structure sentences.
+* **Coherence:** Generates text and a few numbers, but it still struggles to put together a sentence.
 
 ## Building from Source
 1. Install the **[CE C/C++ Toolchain](https://github.com)**.
