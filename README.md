@@ -14,7 +14,7 @@ Running a generative language model on a stock TI-84 Plus CE requires solving a 
 1. **Jailbreak (OS 5.5+):** Ensure your calculator can run native C/Assembly programs using **arTIfiCE** and **Cesium**.
 2. **Transfer Files:** Using TI Connect CE or TiLP, send **`CHATBOT.8xp`**, **`TOKEN.8xv`**, and all **`MODEL0.8xv` – `MODEL5.8xv`** files to your calculator.
 3. **Archive AppVars:** Press `2nd` -> `+` (`MEM`) -> `2: Mem Mgmt/Del...` -> `8: AppVars...` and archive (`*`) **`TOKEN`** and every **`MODEL`** file (`MODEL0` through `MODEL5`) so they sit in Flash ROM instead of RAM.
-4. **Chat:** Launch **`CHATBOT`** from Cesium. Type a short lowercase prompt (press `0` for spaces), hit `enter`, and wait ~1-2 Minutes as the 48 MHz CPU crunches through the transformer layers.
+4. **Chat:** Launch **`CHATBOT`** from Cesium. Type a short lowercase prompt (press `0` for spaces), hit `enter`, and wait ~1-3 Minutes as the 48 MHz CPU crunches through the transformer layers.
 
 ## Current Limitations (v0.1)
 * **Speed:** Inference takes roughly 30–45 seconds per response on the 48 MHz CPU.
