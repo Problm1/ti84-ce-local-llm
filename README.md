@@ -2,12 +2,12 @@
 
 A genuine, 100% offline **Llama-architecture Transformer neural network** running natively on an unmodified **TI-84 Plus CE** graphing calculator (48 MHz Zilog eZ80 CPU, 154 KB RAM, 3.0 MB Flash ROM)—with **zero Wi-Fi mods, external microcontrollers, or PC tethering**.
 
-Because a ~300K parameter model is way too small to reliably solve equations, it was specifically trained to hold basic small talk and **cheerfully refuse math or logic questions** (on a graphing calculator, naturally).
+Because a 300K parameter model is way too small to reliably solve equations, it was specifically trained to hold basic small talk and **cheerfully refuse math or logic questions** (on a graphing calculator, naturally).
 
 ## How It Works
 Running a generative language model on a stock TI-84 Plus CE requires solving a severe memory wall:
-* **8-Bit Quantized Micro-Transformer:** Built on Andrej Karpathy's `llama2.c` v2 format (~300K parameters, 4 layers, 64 dimensions, 4 attention heads, 512-token BPE vocabulary) running completely offline on the eZ80 processor.
-* **6-AppVar Flash Streaming:** Because TI-OS caps individual AppVars at ~64 KB, the ~316.5 KB of quantized model weights are sliced into six chunks (`MODEL0.8xv`–`MODEL4.8xv` at ~60.1 KB each, plus `MODEL5.8xv` at ~16 KB) stored in Archive Flash and streamed on the fly via `<fileioc.h>`.
+* **8-Bit Quantized Micro-Transformer:** Built on Andrej Karpathy's `llama2.c` v2 format (260K parameters, 4 layers, 64 dimensions, 4 attention heads, 512-token BPE vocabulary) running completely offline on the eZ80 processor.
+* **6-AppVar Flash Streaming:** Because TI-OS caps individual AppVars at 64 KB, the 316.5 KB of quantized model weights are sliced into six chunks (`MODEL0.8xv`–`MODEL4.8xv` at 60.1 KB each, plus `MODEL5.8xv` at 16 KB) stored in Archive Flash and streamed on the fly via `<fileioc.h>`.
 * **Zero-Heap Shadow RAM Mapping:** To avoid exhausting the calculator's 154 KB user RAM, the vocabulary table and KV-cache buffers are mapped directly into off-screen TI-OS shadow memory (`pixelShadow` at `0xD031F6` and `saveSScreen` at `0xD0EA1F`).
 
 ## Installation (Run on Your Own TI-84 Plus CE)
